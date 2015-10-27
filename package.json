@@ -1,0 +1,9 @@
+{
+  "name": "sofia2",
+  "description": "KP for connecting to Sofia2",
+  "version": "0.0.1",
+  "dependencies": {
+    "mqtt" : "0.3.11",
+    "q"    : "1.0.1"
+  }
+}
