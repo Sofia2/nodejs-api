@@ -9,7 +9,7 @@ var Q      = require('q');
 var XXTEA  = require('./XXTEA');
 var Base64 = require('./base64');
 
-var CLIENT_TOPIC                      = "CLIENT_TOPIC";           // Topic to publish messages
+var CLIENT_TOPIC                      = "SSAP-REQUEST";           // Topic to publish messages
 var TOPIC_PUBLISH_PREFIX              = '/TOPIC_MQTT_PUBLISH';    // Topic to receive the response
 var TOPIC_SUBSCRIBE_INDICATION_PREFIX = '/TOPIC_MQTT_INDICATION'; // Topic to receive notifications
 

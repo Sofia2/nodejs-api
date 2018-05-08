@@ -10,8 +10,9 @@ var ssapMessageGenerator = require("../SSAPMessageGenerator");
 var myKp = new kp.KpMQTT();
 var sessionKey;
 
-myKp.connect('sofia2.com', 1880)
+myKp.connect('sofia2.com', 1883)
 	.then(function() {
+		console.log("CONECTADO");
 		// JOIN Message generation
 		var ssapMessageJOIN = ssapMessageGenerator.generateJoinByTokenMessage('e5e8a005d0a248f1ad2cd60a821e6838', 'KPTestTemperatura:KPTestTemperatura01');	
 		

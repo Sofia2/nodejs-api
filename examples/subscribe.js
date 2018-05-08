@@ -23,7 +23,7 @@ var sessionKey;
 var subsId;
 
 //Connect to SIB
-myKp.connect('sofia2.com', 1880)
+myKp.connect('sofia2.com', 1883)
 	.then(function() {
 		// JOIN Message generation
 		var ssapMessageJOIN = ssapMessageGenerator.generateJoinByTokenMessage('e5e8a005d0a248f1ad2cd60a821e6838', 'KPTestTemperatura:KPTestTemperatura01');
@@ -41,7 +41,7 @@ myKp.connect('sofia2.com', 1880)
 		}
 
 		// SUBSCRIBE message generation
-		var ssapMessageSUBSCRIBE = ssapMessageGenerator.generateSubscribeWithQueryTypeMessage('Select * from TestSensorTemperatura where Sensor.measure=25', 'TestSensorTemperatura', 'SQLLIKE', 0, sessionKey);
+		var ssapMessageSUBSCRIBE = ssapMessageGenerator.generateSubscribeWithQueryTypeMessage('select * from TestSensorTemperatura where Sensor.measure=25', 'TestSensorTemperatura', 'SQLLIKE', 0, sessionKey);
 		
 		return myKp.send(ssapMessageSUBSCRIBE);
 	})
